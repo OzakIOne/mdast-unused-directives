@@ -1,4 +1,3 @@
-import rehypeDocument from 'rehype-document';
 import rehypeFormat from 'rehype-format';
 import rehypeStringify from 'rehype-stringify';
 import remarkParse from 'remark-parse';

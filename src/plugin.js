@@ -1,6 +1,4 @@
 import { visit } from 'unist-util-visit';
-// import { unified } from 'unified';
-// import stringify from 'remark-stringify';
 
 const directiveTypes = ['containerDirective', 'leafDirective', 'textDirective'];
 export default function plugin(filePath) {
