@@ -1,5 +1,11 @@
 lol
 
+qwe:test0
+
+qwe: test0
+
+qwe\:test0
+
 :test1
 
 :test11

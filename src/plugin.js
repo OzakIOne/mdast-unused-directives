@@ -6,6 +6,7 @@ export default function plugin(filePath) {
     const unusedDirectives = [];
     
     const directiveVisitor = (node) => {
+      // console.log(node);
       if (directiveTypes.includes(node.type)) {
         unusedDirectives.push({name:node.name,type:node.type,start:node.position.start.line,path:` ${filePath}:${node.position.start.line}:${node.position.start.column}`});
       }
