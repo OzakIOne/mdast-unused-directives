@@ -10,15 +10,16 @@ import plugin from './plugin.js';
 import path from 'node:path';
 import fs from 'node:fs';
 
+const filePath = path.resolve('src', 'test.md');
+
 const file = await unified()
   .use(remarkParse)
+  .use(plugin, filePath)
+  .use(remarkDirective)
   .use(remarkRehype)
-  // .use(rehypeDocument, { title: '👋🌍' })
   .use(rehypeFormat)
   .use(rehypeStringify)
-  .use(remarkDirective)
-  .use(plugin)
-  .process(fs.readFileSync(path.resolve('src', 'test.md'), 'utf-8'));
+  .process(fs.readFileSync(filePath, 'utf-8'));
 
 // eslint-disable-next-line no-undef
 console.error(reporter(file));
